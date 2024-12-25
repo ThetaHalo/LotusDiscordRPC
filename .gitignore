@@ -1,0 +1,7 @@
+bin/
+obj/
+bin/
+/.vs/
+FodyWeavers.xml
+FodyWeavers.xsd
+*.sln 
