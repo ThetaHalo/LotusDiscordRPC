@@ -19,7 +19,7 @@ public class LotusDiscordRPCVersion: VentLib.Version.Version
 
     public override string ToSimpleName()
     {
-        return "LotusDiscordRpc v1.0.0";
+        return "LotusDiscordRpc v1.0.1";
     }
 
     public override string ToString() => "LotusDiscordRPC";
