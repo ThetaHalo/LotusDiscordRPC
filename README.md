@@ -1,4 +1,4 @@
-## Custom Discord RPC for [Project: Lotus](https://github.com/Lotus-AU/LotusContinued)
+## Custom Discord Activity (RPC) for [Project: Lotus](https://github.com/Lotus-AU/LotusContinued)
 <u><a href="https://github.com/ThetaHalo/LotusDiscordRPC">Latest Release</a></u> | <u><a href="https://github.com/Lotus-AU/LotusContinued/releases/latest">Download Project: Lotus!</a></u>
 ---
 

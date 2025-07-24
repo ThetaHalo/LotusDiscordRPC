@@ -40,7 +40,7 @@ public class DiscordSecondPatch
             {
                 var stateMessage = Helper.getStateMessage(Game.State);
                 if (Game.State == GameState.InIntro) stateMessage += $" • ({GameData.Instance.PlayerCount}/{GameManager.Instance.LogicOptions.MaxPlayers})"; // this doesn't update when a player leaves, oh well nothing i can do.
-                DiscordMessage = "Lotus v" + (ProjectLotus.DevVersion ? $"{ProjectLotus.VisibleVersion}.{ProjectLotus.BuildNumber}" : "v" + ProjectLotus.VisibleVersion) + $" - ({gameCode}) | ({gameRegion})";
+                DiscordMessage = "Lotus v" + (ProjectLotus.DevVersion ? $"{ProjectLotus.VisibleVersion}.{ProjectLotus.BuildNumber}" : ProjectLotus.VisibleVersion) + $" - ({gameCode}) | ({gameRegion})";
                 trueActivityState = stateMessage;
             }
         }
