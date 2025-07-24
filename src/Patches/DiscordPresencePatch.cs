@@ -21,11 +21,19 @@ public class DiscordSecondPatch
         var DiscordMessage = "Project: Lotus " + (ProjectLotus.DevVersion ? ProjectLotus.DevVersionStr : $"v{ProjectLotus.VisibleVersion}"); 
         activity.Details = DiscordMessage;
         if (DataManager.Settings.Gameplay.StreamerMode) return;
+        
+        activity.Assets = new ActivityAssets
+        {
+            LargeImage = "https://avatars.githubusercontent.com/u/173427715?s=1400&v=4",
+            LargeText = "Project: Lotus " + (ProjectLotus.DevVersion ? $"v{ProjectLotus.VisibleVersion}.{ProjectLotus.BuildNumber}" : "v" + ProjectLotus.VisibleVersion),
+            SmallImage = "icon",
+            SmallText = $"Among Us",
+        };
 
         if (activity.State is not "In Menus" and not "In Freeplay")
         {
             gameCode = GameCode.IntToGameName(AmongUsClient.Instance.GameId);
-            gameRegion = Helper.GetCurrentRegionName(ServerManager.Instance.CurrentRegion.Name);    
+            gameRegion = Helper.GetCurrentRegionName(ServerManager.Instance.CurrentRegion.Name);
 
             if (AmongUsClient.Instance.GameId == 32) return;
             if (gameCode != "" && gameRegion != "")
