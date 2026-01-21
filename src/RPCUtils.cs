@@ -2,7 +2,7 @@ using Lotus.API.Odyssey;
 
 namespace LotusDiscordRPC;
 
-public class Helper
+public static class RPCUtils
 {
     public static string GetMapName(int mapId)
     {
@@ -11,16 +11,16 @@ public class Helper
             0 => "The Skeld",
             1 => "MIRA HQ",
             2 => "Polus",
-            3 => "delkS ehT",
+            3 => "ehT dlekS",
             4 => "Airship",
             5 => "The Fungle",
             6 => "Submerged",
-            _ => "An Unknown Map"
+            _ => "An Unexplored Map"
         };
     }
 
     public static string GetCurrentRegionName(string region)
-    { // there's a better way to do this, i'm just purely lazy.
+    {
         return region switch
         {
             "North America" => "NA",
@@ -36,7 +36,7 @@ public class Helper
         };
     }
 
-    public static string getStateMessage(GameState state)
+    public static string GetStateMessage(GameState state)
     {
         string currentMap = GetMapName(GameManager.Instance.LogicOptions.MapId);
         return state switch
